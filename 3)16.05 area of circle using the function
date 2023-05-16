@@ -1,0 +1,28 @@
+/*
+    Program to calculate the Area of Circle using function
+*/
+#include<stdio.h>
+#define PI 3.14    
+float getArea(float radius)
+{  // area = pi * r^2
+    return PI * radius * radius;
+}
+ 
+int main()
+{
+    float radius, area;
+    printf("Enter the radius of Circle: ");
+    scanf("%f", &radius);
+ 
+    if(radius <= 0.0)
+    {
+        printf("Error: Please enter valid value\n");
+        return 0;
+    }
+ 
+    // call 'area' function with 'radius'
+    area = getArea(radius);
+    // print the result
+    printf("Area of Circle with %f radius is : %f \n", radius, area);
+  return 0;
+}
